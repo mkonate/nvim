@@ -8,7 +8,7 @@ local servers = {
   "cssls",
   "html",
   "jsonls",
-  "lemminx"
+  "lemminx",
   "pyright",
   "sumneko_lua",
   "tsserver",
