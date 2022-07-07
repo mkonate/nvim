@@ -94,8 +94,6 @@ return packer.startup(function(use)
   use { "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" }
   use { "f-person/git-blame.nvim", commit = "" }
   use {"ruifm/gitlinker.nvim", commit = "" }
-  use {"mattn/vim-gist", commit = "" }
-  use {"mattn/webapi-vim", commit = "" }
 
   -- DAP
   use { "mfussenegger/nvim-dap", commit = "014ebd53612cfd42ac8c131e6cec7c194572f21d" }
