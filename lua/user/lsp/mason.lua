@@ -18,7 +18,9 @@ mason.setup()
 
 mason_lspconfig.setup({
 	ensure_installed = {
+		"jdtls",
 		"jsonls",
+		"sumneko_lua",
 		"sumneko_lua",
 	},
 	-- auto-install configured servers (with lspconfig)
