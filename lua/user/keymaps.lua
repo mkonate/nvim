@@ -11,6 +11,7 @@ vim.g.maplocalleader = " "
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", opts)
+vim.keymap.set({ "n", "v" }, "<C-e>", "<Nop>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -35,10 +36,12 @@ keymap("n", "<leader>sx", ":close<CR>") -- close current split window
 
 -- vim-maximizer
 keymap("n", "<leader>sm", ":MaximizerToggle<CR>")
-keymap("n", "<leader>r", "<Plug>RestNvim", opts)
 
 -- nvim-tree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+
+-- rest-nvim
+keymap("n", "<leader>r", "<Plug>RestNvim", opts)
 
 -- telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
