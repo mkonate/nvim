@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/mkonate/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
+  ["cmp-dap"] = {
+    loaded = true,
+    path = "/home/mkonate/.local/share/nvim/site/pack/packer/start/cmp-dap",
+    url = "https://github.com/rcarriga/cmp-dap"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/mkonate/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -164,6 +169,16 @@ _G.packer_plugins = {
     path = "/home/mkonate/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/mkonate/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/home/mkonate/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
   ["nvim-jdtls"] = {
     loaded = true,
     path = "/home/mkonate/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
@@ -195,6 +210,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mkonate/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/home/mkonate/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,

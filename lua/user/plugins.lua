@@ -34,6 +34,7 @@ return packer.startup(function(use)
 
 	-- colorschemes
 	use({ "dracula/vim", as = "dracula" })
+  use 'navarasu/onedark.nvim' -- Theme inspired by Atom
 
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
@@ -90,6 +91,11 @@ return packer.startup(function(use)
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
 	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+
+  -- Debugging
+  use 'mfussenegger/nvim-dap'
+  use 'rcarriga/cmp-dap'
+  use "rcarriga/nvim-dap-ui"
 
 	-- treesitter configuration
 	use({

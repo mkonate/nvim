@@ -22,6 +22,25 @@ local home = os.getenv("HOME")
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 local workspace_dir = home .. "/workspace/" .. project_name
 
+local path_to_java_dap = home .. "/Tools/debuggers/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar"
+
+
+JAVA_DAP_ACTIVE = true
+local bundles = {}
+
+if JAVA_DAP_ACTIVE then
+  vim.list_extend(bundles, vim.split(vim.fn.glob(home .. "/.config/nvim/vscode-java-test/server/*.jar"), "\n"))
+  vim.list_extend(
+    bundles,
+    vim.split(
+      vim.fn.glob(
+        home .. "/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar"
+      ),
+      "\n"
+    )
+  )
+end
+
 -- Main Config
 local config = {
 	cmd = {
@@ -45,7 +64,6 @@ local config = {
 		"-data",
 		workspace_dir,
 	},
-	on_attach = require("user.lsp.lsphandlers").on_attach,
 	root_dir = root_dir,
 
 	settings = {
@@ -112,9 +130,17 @@ local config = {
 		allow_incremental_sync = true,
 	},
 	init_options = {
-		bundles = {},
+		bundles = {
+      vim.fn.glob(path_to_java_dap, 1)
+
+    },
 	},
 }
+
+config['on_attach'] = function(client, bufnr)
+	require("user.lsp.lsphandlers").on_attach(client, bufnr)
+  require('jdtls').setup_dap({ hotcodereplace = 'auto' })
+end
 
 -- This starts a new client & server,
 -- or attaches to an existing client & server depending on the `root_dir`.

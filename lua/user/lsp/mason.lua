@@ -20,7 +20,7 @@ mason_lspconfig.setup({
 	ensure_installed = {
 		"jdtls",
 		"jsonls",
-		"sumneko_lua",
+		"pyright",
 		"sumneko_lua",
 	},
 	-- auto-install configured servers (with lspconfig)
@@ -33,7 +33,7 @@ mason_null_ls.setup({
 		"prettier", -- ts/js formatter
 		"stylua", -- lua formatter
 		"eslint_d", -- ts/js linter
-    "markdownlint",
+		"markdownlint",
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
